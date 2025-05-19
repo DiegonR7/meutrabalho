@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha Página Pessoal</title>
+    <style>
+        body {
+            background-color: #e8f5e9; /* Verde claro */
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+        }
+        
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            font-size: 2.5em;
+        }
+        
+        p {
+            font-size: 1.1em;
+            text-align: justify;
+            line-height: 1.6;
+            margin: 15px 0;
+        }
+        
+        ul {
+            line-height: 2;
+            font-size: 1.1em;
+        }
+        
+        img {
+            border-radius: 15px;
+            display: block;
+            margin: 20px auto;
+            width: 300px;
+            height: auto;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        
+        table {
+            width: 80%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        
+        th, td {
+            padding: 12px;
+            text-align: center;
+            border: 1px solid #ddd;
+        }
+        
+        th {
+            background-color: #2c3e50;
+            color: white;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        
+        tr:hover {
+            background-color: #e9e9e9;
+        }
+        
+        a {
+            color: #3498db;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        a:hover {
+            color: #2980b9;
+            text-decoration: underline;
+        }
+        
+        button {
+            background-color: #2c3e50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1em;
+            border-radius: 5px;
+            cursor: pointer;
+            display: block;
+            margin: 20px auto;
+            transition: background-color 0.3s;
+        }
+        
+        button:hover {
+            background-color: #3498db;
+        }
+        
+        #mensagem {
+            text-align: center;
+            font-size: 1.2em;
+            margin: 20px;
+            padding: 15px;
+            background-color: #e8f4fc;
+            border-radius: 5px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Diego Nogueira Rocco</h1>
+    
+    <p>Meu nome é Diego Nogueira Rocco, moro no Brasil, tenho 22 anos e faço graduação tecnológica em ADS na UNINTER. 
+        No meu tempo livre, gosto de jogar futebol e assistir a séries.</p>
+    
+    <button onclick="mostrarMensagem()">Clique para ver uma mensagem!</button>
+    <div id="mensagem"></div>
+    
+    <h2>Meus Hobbies Favoritos</h2>
+    <ul>
+        <li>Jogar futebol</li>
+        <li>Assistir a séries</li>
+        <li>Ouvir músicas</li>
+    </ul>
+    
+    <img src="https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Campo de futebol">
+    
+    <h2>Países que Quero Visitar</h2>
+    <table border="1">
+        <tr>
+            <th>País</th>
+            <th>Imagem</th>
+        </tr>
+        <tr>
+            <td>Espanha</td>
+            <td><img src="https://images.unsplash.com/photo-1523531294919-4bcd7c65e216?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=60" alt="Espanha" style="width:100px; border-radius:8px;"></td>
+        </tr>
+        <tr>
+            <td>Estados Unidos</td>
+            <td><img src="https://images.unsplash.com/photo-1485738422979-f5c462d49f74?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=60" alt="Estados Unidos" style="width:100px; border-radius:8px;"></td>
+        </tr>
+        <tr>
+            <td>Japão</td>
+            <td><img src="https://images.unsplash.com/photo-1492571350019-22de08371fd3?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=60" alt="Japão" style="width:100px; border-radius:8px;"></td>
+        </tr>
+    </table>
+    
+    <p>Um site que visito bastante: <a href="https://www.youtube.com" target="_blank">YouTube</a></p>
+
+    <script>
+        function mostrarMensagem() {
+            const mensagens = [
+                "Aproveite!",
+                "Seja bem-vindo!",
+                "Espero que goste!",
+                "Sinta-se em casa!"
+            ];
+            
+            const mensagemAleatoria = mensagens[Math.floor(Math.random() * mensagens.length)];
+            const elementoMensagem = document.getElementById('mensagem');
+            
+            elementoMensagem.textContent = mensagemAleatoria;
+            elementoMensagem.style.display = 'block';
+        }
+    </script>
+</body>
+</html>
